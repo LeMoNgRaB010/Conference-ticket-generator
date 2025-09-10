@@ -1,0 +1,477 @@
+
+@font-face {
+    font-family: "inconsolata";
+    src: url("../assets/fonts/static/Inconsolata-Bold.ttf") format("truetype");
+}
+@font-face {
+ font-family: "test-regular";
+    src: url("../assets/fonts/static/Inconsolata-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family:"sub-font" ;
+  src: url("../assets/fonts/static/Inconsolata-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "variable";
+  src: url("../assets/fonts/Inconsolata-VariableFont_wdth,wght.ttf") format("truetype");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.bg1{
+ background-image: url("../assets/images/background-desktop.png");
+ background-size: cover;
+ background-position: center;
+ background-repeat: repeat;
+ position: relative;
+ height: 100vh;
+ width: 100vw;
+ z-index: 0; 
+
+
+}
+.bg2-pattern-line{
+    background-image: url("../assets/images/pattern-lines.svg");
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    background-size: contain;
+    left: -1%;
+     
+
+}
+.pattern-left-down{
+background-image: url("../assets/images/pattern-squiggly-line-bottom-desktop.svg");
+position: absolute;
+background-size: contain;
+background-position: bottom;
+background-repeat: no-repeat;
+height: 100vh;
+width: 100vh;
+z-index: 3;
+bottom: 0;
+left: 0;
+  
+}
+.pattern-right-top{
+background-image: url("../assets/images/pattern-squiggly-line-top.svg");
+position: absolute;
+background-size: contain;
+background-position: top;
+background-repeat: no-repeat;
+height: 30%;
+width: 30%;
+z-index: 3;
+right: 0;
+top: 0;
+}
+
+.circle-left{
+ background-image: url("../assets/images/pattern-circle.svg");
+ position: absolute;
+ background-size: contain;
+ background-repeat: no-repeat;
+ left: 5%;
+ top: -13%;
+ z-index: 3;
+ width: 25%;
+ height: 25%;
+
+}
+
+.circle-right{
+ background-image: url("../assets/images/pattern-circle.svg");
+ position: absolute;
+ background-size: contain;
+ background-repeat: no-repeat;
+ right: 0;
+ margin: auto 0;
+ margin-top: 20%;
+ margin-right:10%;
+ width: 25%;
+ height: 25%;
+ z-index: 3;
+
+
+}
+.container{
+ display: flex;
+ flex-direction: column;
+ justify-content: top;
+ position: relative;
+ align-items: center;
+ z-index: 5;
+ width:100vw;
+ height: 100vh;
+}
+
+.logo{
+    
+  background-image: url("../assets/images/logo-full.svg");
+    background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px;
+  height: 100px;
+  
+
+}
+
+.title{
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  font-family:"inconsolata";
+  font-weight: 800;
+  font-size: 3vw;
+  
+
+}
+.second-title{
+ color: hsl(252, 6%, 83%);
+ font-family: "test-regular";
+ font-weight:700;
+ text-align: center;
+ font-size: 1.1rem;
+ 
+}
+.input-group{
+  margin-top: 2em; 
+  width: 30%;
+  display: flex;
+ flex-direction: column;
+ justify-content: center;
+
+}
+.sub-title{
+color:hsl(252, 6%, 83%);
+font-family: "variable";
+font-weight: 500;
+text-align: left;
+margin:0.7em 0em;
+
+
+
+}
+.drag{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  border: 0.05em;
+  border-style: dashed;
+  border-radius: 0.5em;
+  border-color: hsl(252, 6%, 83%);
+  background-color: hsl(245, 15%, 58%,15%);
+  background-blend-mode: darken;
+  backdrop-filter: blur(3px);
+  
+}
+.input-drag{
+  position: absolute;
+  width:100%;
+  height: 100%;
+  opacity: 0;
+  cursor:pointer;
+
+}
+.upload-icon-wrapper{
+  position: relative; 
+  background-color:hsl(245, 15%, 58%,15%) ;
+  width: 20%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.03em  solid hsl(252, 6%, 83%,40%);;
+  border-radius: 0.7em;
+  padding: 1.7em 0.7em ;
+  backdrop-filter: blur(2px);
+  
+}
+.upload-icon{
+  position: relative;
+  background-image: url("../assets/images/icon-upload.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  padding: 1.3em;
+     
+
+}
+ 
+
+.upload-icon-label{
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+  font-family: "sub-font";
+  margin: 1em;
+  color: hsl(0, 0%, 100%,70%);
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.info:before{
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../assets/images/icon-info.svg") ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right:0.5em;
+  margin-top: 0.5em;
+  
+  
+}
+.info{
+  margin: 0;
+  padding: 0;
+  color:  hsl(0, 0%, 100%);
+  font-family: "variable";
+  font-weight: 100;
+  font-size: 15px;
+  text-wrap: nowrap;
+  margin: 0.3em 0em;
+}
+
+.input-prop{
+ background-color: hsl(245, 15%, 58%,15%);
+  border: 0.05em solid hsl(252, 6%, 83%,30%);
+  border-radius: 0.4em;
+  height: 1.7em;
+  color: hsl(0, 0%, 100%);
+  font-family: "variable";
+  padding: 0.7em;
+}
+
+.input-prop:focus{
+
+  outline:0.03em solid  hsl(7, 88%, 67%);
+}
+#email-input::placeholder{
+ 
+  font-family: "variable";
+  color: hsl(0, 0%, 100%,40%);
+  font-size: 14px;
+  
+}
+
+
+.input-button{
+    color: hsl(248, 70%, 10%);
+    font-family: "variable";
+    font-weight: 900;
+    background-color: hsl(7, 88%, 67%);
+    margin:1em 0em ;
+    border: 0.05em hidden  hsl(7, 88%, 67%); 
+    height: 1.7em;
+    border-radius: 0.5em;
+    cursor: pointer;
+     
+  }
+
+
+  .ticket-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+  
+  }
+  #ticket-p-id{
+      
+    color: hsl(0, 0%, 100%);
+    width:  fit-content;
+    height: fit-content;
+  text-align: center;   
+  font-family: "test-regular";
+  font-weight:700;
+  font-size: 1.1rem;
+  margin: 1.2em;
+ 
+  }
+
+
+  #ticket-header{
+     color: hsl(0, 0%, 100%);
+  width:  fit-content;
+    height: fit-content;
+    font-family:"inconsolata";
+    font-weight: 800;
+    text-align: center;
+    font-size: 3vw;
+  
+    
+  }
+
+  .gradient-text{
+  background: linear-gradient(90deg, hsl(7, 86%, 67%) , hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;  
+  color: transparent;
+   font-family:"inconsolata";
+    font-weight: 800;
+    text-align: center;
+    font-size: 3vw;
+
+
+  }
+
+  .ticket-pattern{
+   background-image: url("../assets/images/pattern-ticket.svg");
+   background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 70%;
+    aspect-ratio: 2 / 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin:1em;
+    padding:0;
+
+    
+    
+   
+
+  }
+
+  
+
+  .top-ticket{
+
+  display: relative;
+  width: 65%;
+  height: 45%;
+  
+   
+
+  }
+
+  #ticket-logo{
+
+     background-image: url("../assets/images/logo-full.svg");
+   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 80%;
+  height: 45%; 
+  margin: 1.3em;
+  margin-bottom: 0;
+}
+
+#ticket-date{
+  font-family: "variable";
+  font-weight: 300;
+  display: relative;
+  width: 80%;
+  height: 45%;
+  color: hsl(252, 6%, 83%);
+  margin-left: 5em;
+ text-wrap: nowrap;
+
+}
+
+.bottom-ticket{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  display: relative;
+  width: 80%;
+  height: 45%;
+  margin-top: 1em;
+
+}
+
+#ticket-picture{
+  
+  border-radius: 1em;
+  width: 17%;
+  aspect-ratio: 2 / 2; 
+  margin-left:1em;
+
+}
+
+.name-github{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1em;
+ 
+}
+
+#ticket-usrname{
+    display: relative;
+    font-family:"test-regular";
+    font-weight: 500;
+    text-align: center;
+    color: hsl(0, 0%, 100%);  
+    font-size: 1.5em;
+    text-wrap: nowrap;
+    width: 50%;
+
+}
+
+#ticket-github::before{
+      content: "";
+    display: inline-block;
+    background-image: url("../assets/images/icon-github.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: -18%;
+    margin-right: 0.5em;
+    
+
+}
+#ticket-github{
+  font-weight:500;
+   font-family:"sub-font" ;
+   color: hsl(252, 6%, 83%);
+
+
+
+}
+
+.email-style{
+
+  color: hsl(7, 86%, 67%);
+}
+
+
+@media (max-width:375px){
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 5px;
+}
+.info{
+  font-size: 5px;
+}
+
+}

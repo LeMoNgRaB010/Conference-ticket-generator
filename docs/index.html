@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="file.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png"> 
+    <link rel="preload" href="../assets/images/background-desktop.png" as="image" >
+    <title>Ticket generator</title>
+</head>
+<body>
+     <div class="bg1">
+          <div class="bg2-pattern-line"></div>
+          <div class="pattern-left-down"></div>
+          <div class="pattern-right-top"></div>
+          <div class="circle-left"></div>
+          <div class="circle-right" ></div>
+          <div class="container">
+              <div class="logo"></div>
+              <h1 class="title" id="titleid">Your Journey To Coding Conf<br>2025 Starts Here!</h1>
+              <h3 class="second-title" id="second-titleid">Secure your spot at next year's biggest coding conference</h3>
+          <div class="input-group" id="inputgrp" >
+              <h2 class="sub-title">Upload Avatar</h2>
+                <form enctype="multipart/form-data" class="drag">     
+                
+                  <img class="input-ticket" src="" style="display:none; max-width:100px; height:100px; margin:0.5em;" >
+                  <div class="upload-icon-wrapper">
+                    <div class="upload-icon"></div>
+                 </div>
+            <h6 class="upload-icon-label">Drag and drop or click to upload</h6>                           
+             <input type="file" id="picid" class="input-drag" accept="image/*"  >     
+            </form> 
+              <h6 class="info">Upload your photo (JPG or PNG. max size 500KB).</h6>  
+              <h2 class="sub-title">Full Name</h2>
+              <input type="text" id="nameid" name="fname" class="input-prop">
+              <h2 class="sub-title">Email Address</h2>
+              <input type="email" name="email" class="input-prop" id="emailid" placeholder="example@email.com">
+              <h2 class="sub-title">Github Username</h2>
+              <input type="text" name="github_username" class="input-prop" id="gitusrid" placeholder="@yourusername">
+              <button  type="submit" class="input-button" id="submit-button" >Generate my ticket</button> 
+                  
+          </div>
+               
+            <div class="ticket-div">
+                <h1 id="ticket-header"></h1>
+                <p class="ticket-p" id="ticket-p-id" ></p>
+ 
+                <div class="ticket-pattern">
+                   <div class="top-ticket">
+                      <div id="ticket-logo"></div>
+                     <h6 id="ticket-date"></h6>
+                   </div>
+
+                   <div class="bottom-ticket">
+                       <img id="ticket-picture" >
+                         <div class="name-github">
+                            <h1 id="ticket-usrname"></h1>
+                            <h6 id="ticket-github"></h6> 
+                         </div>  
+
+                   </div>
+
+                </div>
+            </div>
+     </div>
+   
+
+  <script src="drag.js" defer> </script>    
+</body>
+</html>
